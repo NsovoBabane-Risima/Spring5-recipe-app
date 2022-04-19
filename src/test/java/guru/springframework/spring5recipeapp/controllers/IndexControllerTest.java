@@ -15,7 +15,9 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,7 +49,7 @@ class IndexControllerTest {
     @Test
     void getIndexPage() {
         //given
-        List<Recipe> recipes = new ArrayList<>();
+        Set<Recipe> recipes = new HashSet<>();
         Recipe recipe = new Recipe();
         recipe.setId(6L);
         recipes.add(recipe);
